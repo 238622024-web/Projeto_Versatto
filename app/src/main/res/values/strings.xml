@@ -28,4 +28,5 @@ DE SENHA</string>
     <string name="create_account_button">Criar Conta</string>
     <string name="logout_button">Sair</string>
     <string name="feed_image_description">Imagem do feed</string>
+    <string name="schedules_for_date">Agendamentos para: %s</string>
 </resources>
