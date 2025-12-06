@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".GaleriaActivity">
+
+    <!-- 1. Barra Superior -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarGaleria"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@color/gold">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Galeria de Cortes"
+                android:textColor="@color/gold"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- 2. Grade de Cards Estática -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:padding="4dp">
+
+            <!-- Card de Imagem 1 -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/GalleryCard">
+                <ImageView
+                    style="@style/GalleryImage"
+                    android:src="@drawable/ic_person" 
+                    android:contentDescription="Imagem 1 da galeria"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card de Imagem 2 -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/GalleryCard">
+                <ImageView
+                    style="@style/GalleryImage"
+                    android:src="@drawable/ic_person"
+                    android:contentDescription="Imagem 2 da galeria"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card de Imagem 3 -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/GalleryCard">
+                <ImageView
+                    style="@style/GalleryImage"
+                    android:src="@drawable/ic_person"
+                    android:contentDescription="Imagem 3 da galeria"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card de Imagem 4 -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/GalleryCard">
+
+                <ImageView
+                    style="@style/GalleryImage"
+                    android:layout_height="130dp"
+                    android:contentDescription="Imagem 4 da galeria"
+                    android:src="@drawable/ic_person" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card de Imagem 5 -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/GalleryCard">
+
+                <ImageView
+                    style="@style/GalleryImage"
+                    android:layout_height="133dp"
+                    android:contentDescription="Imagem 5 da galeria"
+                    android:src="@drawable/content" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

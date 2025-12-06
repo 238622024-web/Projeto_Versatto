@@ -1,0 +1,28 @@
+Estrutura do Banco de Dados
+
+## Tabela de Usuários (users)
+- `user_id`: INT, PRIMARY KEY, AUTO_INCREMENT
+- `nome`: VARCHAR(255), NOT NULL
+- `email`: VARCHAR(255), UNIQUE, NOT NULL
+- `senha`: VARCHAR(255), NOT NULL
+
+## Tabela de Agendamentos (appointments)
+- `appointment_id`: INT, PRIMARY KEY, AUTO_INCREMENT
+- `user_id`: INT, FOREIGN KEY REFERENCES users(user_id)
+- `data_agendamento`: DATE, NOT NULL
+- `hora_agendamento`: TIME, NOT NULL
+- `servico`: VARCHAR(255)
+
+## Tabela do Calendário (calendar)
+- `calendar_id`: INT, PRIMARY KEY, AUTO_INCREMENT
+- `data`: DATE, NOT NULL
+- `disponivel`: BOOLEAN, DEFAULT TRUE
+- `dia_da_semana`: VARCHAR(20)
+- `mes`: INT
+- `ano`: INT
+
+## Tabela de Histórico (history)
+- `history_id`: INT, PRIMARY KEY, AUTO_INCREMENT
+- `user_id`: INT, FOREIGN KEY REFERENCES users(user_id)
+- `appointment_id`: INT, FOREIGN KEY REFERENCES appointments(appointment_id)
+- `detalhes`: TEXT

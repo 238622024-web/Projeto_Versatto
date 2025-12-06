@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1C1E"
+    tools:context=".PrecosActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarPrecos"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@color/gold"
+            app:title="Tabela de Preços"
+            app:titleTextColor="@color/gold" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Item de Preço -->
+            <LinearLayout style="@style/PriceItem">
+                <TextView style="@style/PriceItem.Service" android:text="Corte Masculino" />
+                <TextView style="@style/PriceItem.Price" android:text="R$ 40,00" />
+            </LinearLayout>
+
+            <View style="@style/Divider"/>
+
+            <!-- Item de Preço -->
+            <LinearLayout style="@style/PriceItem">
+                <TextView style="@style/PriceItem.Service" android:text="Barba Tradicional" />
+                <TextView style="@style/PriceItem.Price" android:text="R$ 35,00" />
+            </LinearLayout>
+
+            <View style="@style/Divider"/>
+
+            <!-- Item de Preço -->
+            <LinearLayout style="@style/PriceItem">
+                <TextView style="@style/PriceItem.Service" android:text="Corte + Barba" />
+                <TextView style="@style/PriceItem.Price" android:text="R$ 70,00" />
+            </LinearLayout>
+
+            <View style="@style/Divider"/>
+
+            <!-- Item de Preço -->
+            <LinearLayout style="@style/PriceItem">
+                <TextView style="@style/PriceItem.Service" android:text="Pezinho (Acabamento)" />
+                <TextView style="@style/PriceItem.Price" android:text="R$ 20,00" />
+            </LinearLayout>
+
+             <View style="@style/Divider"/>
+
+            <!-- Item de Preço -->
+            <LinearLayout style="@style/PriceItem">
+                <TextView style="@style/PriceItem.Service" android:text="Hidratação Capilar" />
+                <TextView style="@style/PriceItem.Price" android:text="R$ 50,00" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

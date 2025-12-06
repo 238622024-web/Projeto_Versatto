@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1C1E"
+    tools:context=".HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarHome"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Menu"
+                android:textColor="@color/gold"
+                android:textSize="22sp" 
+                android:textStyle="bold" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- User Profile Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/profile_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#2C2C2E"
+                app:cardCornerRadius="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/profile_card_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_person"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/profile_card_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/profile_card_icon"
+                        app:layout_constraintTop_toTopOf="@+id/profile_card_icon"
+                        tools:text="Nome do Usuário" />
+
+                    <TextView
+                        android:id="@+id/profile_card_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/profile_card_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/profile_card_name"
+                        tools:text="ID: 12345" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Menu Grid -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:useDefaultMargins="true">
+
+                <!-- Agendamento -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_agendamento"
+                    style="@style/DashboardCard">
+
+                    <LinearLayout style="@style/DashboardCardContent">
+
+                        <ImageView
+                            style="@style/DashboardCardIcon"
+                            android:src="@android:drawable/ic_menu_today" />
+
+                        <TextView
+                            style="@style/DashboardCardText"
+                            android:text="Agendamento" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Profissionais -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_profissionais"
+                    style="@style/DashboardCard">
+
+                    <LinearLayout style="@style/DashboardCardContent">
+
+                        <ImageView
+                            style="@style/DashboardCardIcon"
+                            android:src="@drawable/ic_profissionais" />
+
+                        <TextView
+                            style="@style/DashboardCardText"
+                            android:text="Profissionais" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Galeria de Cortes -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_galeria_cortes"
+                    style="@style/DashboardCard">
+
+                    <LinearLayout style="@style/DashboardCardContent">
+
+                        <ImageView
+                            style="@style/DashboardCardIcon"
+                            android:src="@drawable/ic_galeria" />
+
+                        <TextView
+                            style="@style/DashboardCardText"
+                            android:text="Galeria" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Preços -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_precos"
+                    style="@style/DashboardCard">
+
+                    <LinearLayout style="@style/DashboardCardContent">
+
+                        <ImageView
+                            style="@style/DashboardCardIcon"
+                            android:src="@drawable/ic_precos" />
+
+                        <TextView
+                            style="@style/DashboardCardText"
+                            android:text="Preços" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Nossa História -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_historia"
+                    style="@style/DashboardCard">
+
+                    <LinearLayout style="@style/DashboardCardContent">
+
+                        <ImageView
+                            style="@style/DashboardCardIcon"
+                            android:src="@drawable/ic_historia" />
+
+                        <TextView
+                            style="@style/DashboardCardText"
+                            android:text="Nossa História" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Meu Perfil -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_perfil"
+                    style="@style/DashboardCard">
+
+                    <LinearLayout
+                        style="@style/DashboardCardContent">
+
+                        <ImageView
+                            style="@style/DashboardCardIcon"
+                            android:src="@drawable/ic_person" />
+
+                        <TextView
+                            style="@style/DashboardCardText"
+                            android:text="Meu Perfil" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+
+             <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:text="Sair" />
+
+            <ImageView
+                android:id="@+id/logo_footer"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/logo" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string-array name="especialidades_array">
+        <item>Escolha o Serviço</item>
+        <item>Corte Masculino</item>
+        <item>Barba Tradicional</item>
+        <item>Corte + Barba</item>
+        <item>Pezinho (Acabamento)</item>
+        <item>Hidratação Capilar</item>
+    </string-array>
+
+    <string-array name="profissionais_array">
+        <item>Escolha o Profissional</item>
+        <item>Lucas</item>
+        <item>Sofia</item>
+        <item>Vitor</item>
+        <item>Isabella</item>
+    </string-array>
+
+    <string-array name="user_types">
+        <item>Usuário</item>
+        <item>Administrador</item>
+    </string-array>
+</resources>
